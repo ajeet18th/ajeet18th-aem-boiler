@@ -1,2 +1,4 @@
 mountpoints:
-  /: https://github.com/ajeet18th/ajeet18th-storefront/tree/main
+  /:
+    url: https://github.com/ajeet18th/ajeet18th-aem-boiler/tree/main
+    type: markup
