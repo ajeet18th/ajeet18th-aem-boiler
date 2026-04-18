@@ -1,4 +1,4 @@
-import { callAppBuilder } from '../../scripts/appbuilder.js';
+import callAppBuilder from '../../scripts/appbuilder.js';
 
 export default async function decorate(block) {
   block.textContent = 'Loading App Builder...';
@@ -16,6 +16,5 @@ export default async function decorate(block) {
     block.append(div);
   } catch (e) {
     block.textContent = 'Failed to load App Builder data';
-    console.error(e);
   }
 }
