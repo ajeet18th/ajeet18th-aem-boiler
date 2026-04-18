@@ -1,14 +1,21 @@
-import { callAppBuilder } from "../../scripts/appbuilder.js";
+export async function callAppBuilder(name) {
+  const url =
+    'https://993145-ajeetdemo-stage.adobeio-static.net/api/v1/web/Ajeetdemo/hello';
 
-export default async function decorate(block) {
+  const response = await fetch(url, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      apikey: 'my-secret-key-123',
+      name
+    })
+  });
 
-  const data = await callAppBuilder("AEM Author");
+  if (!response.ok) {
+    throw new Error('App Builder call failed');
+  }
 
-  const div = document.createElement("div");
-  div.innerHTML = `
-    <h2>Response from App Builder</h2>
-    <pre>${JSON.stringify(data, null, 2)}</pre>
-  `;
-
-  block.append(div);
+  return response.json();
 }
