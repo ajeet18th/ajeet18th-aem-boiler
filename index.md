@@ -1,6 +1,6 @@
-# My AEM + App Builder Store
+# Home
 
-Welcome to my store powered by AEM + App Builder.
+Welcome to my AEM Store
 
 ## App Builder Demo
 

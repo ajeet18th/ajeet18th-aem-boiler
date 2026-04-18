@@ -1,5 +1,6 @@
 export default async function callAppBuilder(name) {
-  const url = 'https://993145-ajeetdemo-stage.adobeio-static.net/api/v1/web/Ajeetdemo/hello';
+  const url =
+    'https://993145-ajeetdemo-stage.adobeio-static.net/api/v1/web/Ajeetdemo/hello';
 
   const response = await fetch(url, {
     method: 'POST',
