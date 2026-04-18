@@ -1,4 +1,4 @@
-import { callAppBuilder } from '../../scripts/appbuilder.js';
+import callAppBuilder from '../../scripts/appbuilder.js';
 
 export default async function decorate(block) {
   const data = await callAppBuilder('AEM Author');
